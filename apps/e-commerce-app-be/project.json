@@ -1,0 +1,26 @@
+{
+  "name": "e-commerce-app-be",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/e-commerce-app-be/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "e-commerce-app-be:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "e-commerce-app-be:build:development"
+        },
+        "production": {
+          "buildTarget": "e-commerce-app-be:build:production"
+        }
+      }
+    }
+  }
+}
