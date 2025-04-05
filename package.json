@@ -2,7 +2,10 @@
   "name": "@e-commerce-app/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "serve:fe": "nx serve e-commerce-app",
+    "serve:be": "nx serve e-commerce-app-be"
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "~19.2.0",
